@@ -8,7 +8,10 @@
 
 // Code here
 
-
+function CarFactory(make, model) {
+  this.make = make;
+  this.model = model;
+}
 
 
 
@@ -27,7 +30,7 @@ function Employee(name, email, hireDate) {
 
 // Code here
 
-
+let bob = new Employee('Bob', 'bob@gmail.com', '01-02-98');
 
 
 
@@ -42,7 +45,16 @@ function Employee(name, email, hireDate) {
 
 // Code here
 
-
+function Car(make, model) {
+  this.make = make;
+  this.model = model;
+  this.move = 0;
+  return {
+    moveCar: function() {
+      return this.move += 10;
+    }
+  }
+}
 
 
   //Function Invocations Here
